@@ -1,28 +1,19 @@
-import = [
-    #"~/.config/alacritty/themes/vscodedark.toml"
-    #"~/.config/alacritty/themes/gruvbox_dark.toml"
-    "~/.config/alacritty/themes/nordic.toml"
-]
-
 [env]
 TERM = "xterm-256color"
 
 [window]
-#padding.x = 10
-#padding.y = 10
-
 startup_mode = "Maximized"
-
-decorations = "Buttonless"
-
-# opacity = 0.8
-# blur = true
-
+decorations = "None"
+# On Mac:
+# decorations = "Buttonless"
+opacity = 0.9
 option_as_alt = "Both"
 
 [font]
-# normal.family = "SFMono Nerd Font"
- normal.family = "JetBrainsMono Nerd Font"
-# normal.family = ""
+normal.family = "JetBrainsMono Nerd Font"
 size = 18
-normal.style = "Bold"
+
+[general]
+import = [
+    "~/.config/alacritty/themes/nordic.toml"
+]

@@ -5,7 +5,7 @@ vim.o.expandtab = true
 vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
 
-vim.opt.mouse = ""
+-- vim.opt.mouse = ""
 
 vim.opt.colorcolumn = "125"
 
@@ -24,6 +24,7 @@ vim.opt.rtp:prepend(lazypath)
 -- Add your plugins here, remember we are using LazyVIM
 local plugins = {
     { "AlexvZyl/nordic.nvim" },
+    { "deparr/tairiki.nvim" },
     {
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.8",
@@ -254,4 +255,5 @@ vim.keymap.set("n", "t", "<cmd>:NvimTreeToggle<CR>")
 -- Look up Zenbones if you want a simple theme
 -- vim.opt.background = "dark"
 -- vim.cmd.colorscheme "quiet"
-vim.cmd.colorscheme "nordic"
+--vim.cmd.colorscheme "nordic"
+vim.cmd.colorscheme "tairiki"
