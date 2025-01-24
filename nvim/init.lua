@@ -23,8 +23,6 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Add your plugins here, remember we are using LazyVIM
 local plugins = {
-    { "AlexvZyl/nordic.nvim" },
-    { "deparr/tairiki.nvim" },
     {
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.8",
@@ -252,8 +250,5 @@ vim.keymap.set("n", "<leader>fc", vim.lsp.buf.format, {})
 vim.keymap.set("n", "t", "<cmd>:NvimTreeToggle<CR>")
 
 -- Theme:
--- Look up Zenbones if you want a simple theme
--- vim.opt.background = "dark"
+vim.cmd.colorscheme "desert"
 -- vim.cmd.colorscheme "quiet"
---vim.cmd.colorscheme "nordic"
-vim.cmd.colorscheme "tairiki"

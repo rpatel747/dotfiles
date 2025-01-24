@@ -6,12 +6,12 @@ startup_mode = "Maximized"
 decorations = "None"
 # On Mac:
 # decorations = "Buttonless"
-opacity = 0.9
+# opacity = 0.7
 option_as_alt = "Both"
 
 [font]
 normal.family = "JetBrainsMono Nerd Font"
-size = 18
+size = 20
 
 [general]
 import = [
