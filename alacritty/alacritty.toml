@@ -15,5 +15,5 @@ size = 20
 
 [general]
 import = [
-    "~/.config/alacritty/themes/nordic.toml"
+    "~/.config/alacritty/tokyodark.toml"
 ]
