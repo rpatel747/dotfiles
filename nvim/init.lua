@@ -24,6 +24,7 @@ vim.opt.rtp:prepend(lazypath)
 -- Add your plugins here, remember we are using LazyVIM
 local plugins = {
     { "tiagovla/tokyodark.nvim" },
+    { "yorickpeterse/nvim-grey" },
     {
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.8",
@@ -250,6 +251,3 @@ vim.keymap.set("n", "<leader>fc", vim.lsp.buf.format, {})
 -- Keymaps for interacting with Nvim-Tree
 vim.keymap.set("n", "t", "<cmd>:NvimTreeToggle<CR>")
 
--- Theme:
-vim.cmd.colorscheme "tokyodark"
--- vim.cmd.colorscheme "quiet"
