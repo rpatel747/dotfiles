@@ -5,8 +5,6 @@ vim.o.expandtab = true
 vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
 
--- vim.opt.mouse = ""
-
 vim.opt.colorcolumn = "125"
 
 -- Keep line numbers and also have relative line numbers
@@ -23,8 +21,9 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Add your plugins here, remember we are using LazyVIM
 local plugins = {
-    { "tiagovla/tokyodark.nvim" },
-    { "yorickpeterse/nvim-grey" },
+    { 'maxmx03/solarized.nvim' },
+    { 'neanias/everforest-nvim' },
+    { 'ellisonleao/gruvbox.nvim' },
     {
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.8",
@@ -86,61 +85,57 @@ require("telescope").setup({
 })
 require("telescope").load_extension("ui-select")
 
--- Mason allows the ability to download various lsps, etc.
--- Mason-lspconfig sets up the lsps that will be used
-require("mason").setup()
-require("mason-lspconfig").setup({
-	ensure_installed = {
-		"lua_ls",
-		"clangd",
-		"csharp_ls",
-		"dockerls",
-		"gopls",
-		"html",
-		"jdtls",
-		"tsserver",
-		"sqls",
-		"yamlls",
-		"jsonls",
-		"cssls",
-		"intelephense",
-		"ruby_lsp",
-		"rust_analyzer",
-		"elixirls",
-		"elp",
-	},
-})
-
--- Setting up specific settings for each lsp
-local lspconfig = require("lspconfig")
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-lspconfig.lua_ls.setup({
-	capabilities = capabilities,
-})
-lspconfig.clangd.setup({
-	capabilities = capabilities,
-})
-lspconfig.csharp_ls.setup({
-	capabilities = capabilities,
-})
-lspconfig.gopls.setup({
-	capabilities = capabilities,
-})
-lspconfig.tsserver.setup({
-	capabilities = capabilities,
-})
-lspconfig.intelephense.setup({
-	capabilities = capabilities,
-})
-lspconfig.ruby_lsp.setup({
-	capabilities = capabilities,
-})
-lspconfig.elixirls.setup({
-	capabilities = capabilities,
-})
-lspconfig.elp.setup({
-	capabilities = capabilities,
-})
+ -- Mason allows the ability to download various lsps, etc.
+ -- Mason-lspconfig sets up the lsps that will be used
+ require("mason").setup()
+ require("mason-lspconfig").setup({
+ 	ensure_installed = {
+ 		"lua_ls",
+ 		"clangd",
+ 		"csharp_ls",
+ 		"dockerls",
+ 		"gopls",
+ 		"html",
+ 		"jdtls",
+ 		"sqls",
+ 		"yamlls",
+ 		"jsonls",
+ 		"cssls",
+ 		"intelephense",
+ 		"ruby_lsp",
+ 		"rust_analyzer",
+ 		"elixirls",
+ 		"elp",
+ 	},
+ })
+ 
+ -- Setting up specific settings for each lsp
+ local lspconfig = require("lspconfig")
+ local capabilities = require("cmp_nvim_lsp").default_capabilities()
+ lspconfig.lua_ls.setup({
+ 	capabilities = capabilities,
+ })
+ lspconfig.clangd.setup({
+ 	capabilities = capabilities,
+ })
+ lspconfig.csharp_ls.setup({
+ 	capabilities = capabilities,
+ })
+ lspconfig.gopls.setup({
+ 	capabilities = capabilities,
+ })
+ lspconfig.intelephense.setup({
+ 	capabilities = capabilities,
+ })
+ lspconfig.ruby_lsp.setup({
+ 	capabilities = capabilities,
+ })
+ lspconfig.elixirls.setup({
+ 	capabilities = capabilities,
+ })
+ lspconfig.elp.setup({
+ 	capabilities = capabilities,
+ })
 
 -- Luasnip gives us the snippets from vscode
 local cmp = require("cmp")
@@ -250,4 +245,12 @@ vim.keymap.set("n", "<leader>fc", vim.lsp.buf.format, {})
 
 -- Keymaps for interacting with Nvim-Tree
 vim.keymap.set("n", "t", "<cmd>:NvimTreeToggle<CR>")
+
+-- Colorscheme and Theme Settings
+vim.cmd.colorscheme "solarized"
+-- vim.cmd.colorscheme "everforest"
+-- vim.cmd.colorscheme "gruvbox"
+
+-- Make nvim transparent
+-- vim.cmd([[highlight Normal guibg=none]])
 
