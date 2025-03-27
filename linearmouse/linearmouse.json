@@ -1,0 +1,43 @@
+{
+  "schemes" : [
+    {
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "vendorID" : "0x1532",
+          "productID" : "0xb2",
+          "productName" : "Razer DeathAdder V3"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1.01
+        }
+      },
+      "pointer" : {
+        "acceleration" : 1.5,
+        "disableAcceleration" : true
+      }
+    },
+    {
+      "pointer" : {
+        "disableAcceleration" : false,
+        "acceleration" : 1
+      },
+      "if" : {
+        "device" : {
+          "category" : "trackpad",
+          "productID" : "0x0",
+          "vendorID" : "0x0",
+          "productName" : "Apple Internal Keyboard \/ Trackpad"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        }
+      }
+    }
+  ],
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0"
+}

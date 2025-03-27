@@ -6,11 +6,13 @@
 ;;       user-mail-address "john@doe.com")
 
 ;; Solarized Dark Theme
-(setq doom-theme 'doom-solarized-dark)
+(setq doom-theme 'doom-solarized-light)
 
 ;; GRUVBOX THEME:
 ;; (setq doom-theme 'doom-gruvbox)
-(setq doom-font "JetBrainsMono Nerd Font:pixelsize=15")
+;;(setq doom-font "JetBrainsMono Nerd Font:pixelsize=15")
+(setq doom-font "MesloLGL Nerd Font:pixelsize = 15")
+
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 

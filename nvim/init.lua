@@ -21,10 +21,10 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Add your plugins here, remember we are using LazyVIM
 local plugins = {
-    { 'maxmx03/solarized.nvim' },
-    { 'neanias/everforest-nvim' },
-    { 'ellisonleao/gruvbox.nvim' },
-    {
+	{ "oonamo/ef-themes.nvim" },
+	{ "miikanissi/modus-themes.nvim" },
+	{ 'loctvl842/monokai-pro.nvim' },
+	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.8",
 		dependencies = { "nvim-lua/plenary.nvim" },
@@ -85,57 +85,57 @@ require("telescope").setup({
 })
 require("telescope").load_extension("ui-select")
 
- -- Mason allows the ability to download various lsps, etc.
- -- Mason-lspconfig sets up the lsps that will be used
- require("mason").setup()
- require("mason-lspconfig").setup({
- 	ensure_installed = {
- 		"lua_ls",
- 		"clangd",
- 		"csharp_ls",
- 		"dockerls",
- 		"gopls",
- 		"html",
- 		"jdtls",
- 		"sqls",
- 		"yamlls",
- 		"jsonls",
- 		"cssls",
- 		"intelephense",
- 		"ruby_lsp",
- 		"rust_analyzer",
- 		"elixirls",
- 		"elp",
- 	},
- })
- 
- -- Setting up specific settings for each lsp
- local lspconfig = require("lspconfig")
- local capabilities = require("cmp_nvim_lsp").default_capabilities()
- lspconfig.lua_ls.setup({
- 	capabilities = capabilities,
- })
- lspconfig.clangd.setup({
- 	capabilities = capabilities,
- })
- lspconfig.csharp_ls.setup({
- 	capabilities = capabilities,
- })
- lspconfig.gopls.setup({
- 	capabilities = capabilities,
- })
- lspconfig.intelephense.setup({
- 	capabilities = capabilities,
- })
- lspconfig.ruby_lsp.setup({
- 	capabilities = capabilities,
- })
- lspconfig.elixirls.setup({
- 	capabilities = capabilities,
- })
- lspconfig.elp.setup({
- 	capabilities = capabilities,
- })
+-- Mason allows the ability to download various lsps, etc.
+-- Mason-lspconfig sets up the lsps that will be used
+require("mason").setup()
+require("mason-lspconfig").setup({
+	ensure_installed = {
+		"lua_ls",
+		"clangd",
+		"csharp_ls",
+		"dockerls",
+		"gopls",
+		"html",
+		"jdtls",
+		"sqls",
+		"yamlls",
+		"jsonls",
+		"cssls",
+		"intelephense",
+		"ruby_lsp",
+		"rust_analyzer",
+		"elixirls",
+		"elp",
+	},
+})
+
+-- Setting up specific settings for each lsp
+local lspconfig = require("lspconfig")
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+lspconfig.lua_ls.setup({
+	capabilities = capabilities,
+})
+lspconfig.clangd.setup({
+	capabilities = capabilities,
+})
+lspconfig.csharp_ls.setup({
+	capabilities = capabilities,
+})
+lspconfig.gopls.setup({
+	capabilities = capabilities,
+})
+lspconfig.intelephense.setup({
+	capabilities = capabilities,
+})
+lspconfig.ruby_lsp.setup({
+	capabilities = capabilities,
+})
+lspconfig.elixirls.setup({
+	capabilities = capabilities,
+})
+lspconfig.elp.setup({
+	capabilities = capabilities,
+})
 
 -- Luasnip gives us the snippets from vscode
 local cmp = require("cmp")
@@ -226,7 +226,7 @@ require("lualine").setup({
 -- Keymaps for hovering over functions, going to function definition,
 -- and getting code actions
 vim.keymap.set("n", "hf", vim.lsp.buf.hover, {})
-vim.keymap.set("n", "gd", "<cmd>vim.lsp.buf.definition()<CR>", {noremap = true, silent = true})
+vim.keymap.set("n", "gd", "<cmd>vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
 vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
 
 -- Setting up telescope and telescope features
@@ -247,10 +247,9 @@ vim.keymap.set("n", "<leader>fc", vim.lsp.buf.format, {})
 vim.keymap.set("n", "t", "<cmd>:NvimTreeToggle<CR>")
 
 -- Colorscheme and Theme Settings
-vim.cmd.colorscheme "solarized"
--- vim.cmd.colorscheme "everforest"
--- vim.cmd.colorscheme "gruvbox"
+--vim.cmd.colorscheme("ef-deuteranopia-dark")
+--vim.cmd.colorscheme("modus_vivendi");
+vim.cmd.colorscheme("monokai-pro");
 
 -- Make nvim transparent
 -- vim.cmd([[highlight Normal guibg=none]])
-

@@ -8,14 +8,10 @@ option_as_alt = "Both"
 # opacity = 0.9
 
 [font]
-normal.family = "JetBrainsMono Nerd Font"
+# normal.family = "JetBrainsMono Nerd Font"
+# normal.family = "Iosevka Nerd Font"
 # normal.family = "SF Mono"
+normal.family = "MesloLGL Nerd Font"
 size = 15
 
-[general]
-import = [
-    #"~/.config/alacritty/gruvboxdark.toml" # Gruvbox Dark
-    #~/.config/alacritty/everforest.toml"  # Everforest
-    "~/.config/alacritty/solarizeddark.toml" # Solarizeddark
-    
-]
+
